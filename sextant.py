@@ -210,7 +210,8 @@ def newest(patterns):
     hits = []
     for d in (PRIVATE / "inbox", HOME / "Downloads", Path("/private/tmp")):
         for pat in patterns:
-            hits += [Path(h) for h in glob.glob(str(d / pat))]
+            hits += [Path(h) for h in glob.glob(str(d / pat))
+                     if os.name == "nt" or Path(h).stat().st_uid == os.getuid()]  # /private/tmp is shared
     return max(hits, key=lambda p: p.stat().st_mtime) if hits else None
 
 
@@ -234,6 +235,13 @@ def sanitize_ublock(b):
     b = json.loads(json.dumps(b))
     b["userFilters"] = []
     b["whitelist"] = [w for w in b.get("whitelist", []) if w.endswith("-scheme")]  # uBO's built-in defaults
+    # Per-site rules name sites the maintainer visits: keep only global ("*") and behind-the-scene rules.
+    keep = lambda line: line.split(" ", 1)[0] in ("*", "behind-the-scene")
+    b["dynamicFilteringString"] = "\n".join(l for l in (b.get("dynamicFilteringString") or "").splitlines() if keep(l))
+    b["hostnameSwitchesString"] = "\n".join(l for l in (b.get("hostnameSwitchesString") or "").splitlines()
+                                            if len(l.split()) > 1 and l.split()[1] in ("*", "behind-the-scene"))
+    b["urlFilteringString"] = ""
+    b["hiddenSettings"] = {}
     sel = b.get("selectedFilterLists", [])
     us = b.get("userSettings") or {}
     ext = [u for u in (us.get("importedLists") or []) if u in sel]
@@ -583,8 +591,14 @@ Keep it under 600 words. Do not use em dashes or en dashes. Write for a technici
         return "_Claude CLI not found; web review skipped._"
     env = {k: v for k, v in os.environ.items() if k != "ANTHROPIC_API_KEY"}  # use the subscription login
     try:
-        r = subprocess.run([claude, "-p", "--output-format", "text", "--allowedTools", "WebSearch", "WebFetch"],
-                           input=prompt, capture_output=True, text=True, timeout=1500, cwd=str(ROOT), env=env)
+        import tempfile
+        # Web pages are untrusted input to this run: give it web tools only (no files, shell or MCP servers)
+        # and an empty working directory, so injected instructions have nothing to read or send.
+        with tempfile.TemporaryDirectory(prefix="sextant-review-") as scratch:
+            r = subprocess.run([claude, "-p", "--output-format", "text", "--tools", "WebSearch,WebFetch",
+                                "--allowedTools", "WebSearch", "WebFetch", "--strict-mcp-config",
+                                "--setting-sources", "user"],
+                               input=prompt, capture_output=True, text=True, timeout=1500, cwd=scratch, env=env)
         if r.returncode == 0 and r.stdout.strip():
             return nodash(r.stdout.strip())
         return f"_Claude review failed (exit {r.returncode}): {(r.stderr or r.stdout).strip()[:300]}_"
