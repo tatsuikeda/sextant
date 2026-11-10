@@ -13,7 +13,7 @@ Disabled extensions are ignored everywhere. Nothing here installs or changes any
 in a browser: it reads profiles and proposes. Stdlib only.
 """
 import argparse, configparser, datetime as dt, glob, html, json, os, re, shutil
-import smtplib, subprocess, sys, urllib.error, urllib.request
+import smtplib, stat, subprocess, sys, urllib.error, urllib.request
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -210,8 +210,13 @@ def newest(patterns):
     hits = []
     for d in (PRIVATE / "inbox", HOME / "Downloads", Path("/private/tmp")):
         for pat in patterns:
-            hits += [Path(h) for h in glob.glob(str(d / pat))
-                     if os.name == "nt" or Path(h).stat().st_uid == os.getuid()]  # /private/tmp is shared
+            for h in glob.glob(str(d / pat)):
+                try:
+                    st = os.lstat(h)  # lstat: a symlink planted in shared /private/tmp is skipped, not followed
+                except OSError:
+                    continue
+                if stat.S_ISREG(st.st_mode) and (os.name == "nt" or st.st_uid == os.getuid()):
+                    hits.append(Path(h))
     return max(hits, key=lambda p: p.stat().st_mtime) if hits else None
 
 
@@ -224,7 +229,13 @@ def ingest_backups():
                              "adguard-settings.json")):
         src = newest(pats)
         if src:
-            shutil.copy2(src, RAW / dest)
+            # Copy from a descriptor opened without following symlinks, re-checking it is a regular file we own.
+            fd = os.open(src, os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0))
+            with os.fdopen(fd, "rb") as fh:
+                st = os.fstat(fh.fileno())
+                if not stat.S_ISREG(st.st_mode) or (os.name != "nt" and st.st_uid != os.getuid()):
+                    log(f"skipped {src}: not a regular file owned by you"); continue
+                (RAW / dest).write_bytes(fh.read())
             found[key] = {"source": src.name, "copied": str(TODAY),
                           "file_date": str(dt.date.fromtimestamp(src.stat().st_mtime))}
     return found
@@ -236,7 +247,9 @@ def sanitize_ublock(b):
     b["userFilters"] = []
     b["whitelist"] = [w for w in b.get("whitelist", []) if w.endswith("-scheme")]  # uBO's built-in defaults
     # Per-site rules name sites the maintainer visits: keep only global ("*") and behind-the-scene rules.
-    keep = lambda line: line.split(" ", 1)[0] in ("*", "behind-the-scene")
+    def keep(line):  # source and destination both global, so no site name survives
+        f = line.split()
+        return len(f) >= 2 and f[0] in ("*", "behind-the-scene") and f[1] == "*"
     b["dynamicFilteringString"] = "\n".join(l for l in (b.get("dynamicFilteringString") or "").splitlines() if keep(l))
     b["hostnameSwitchesString"] = "\n".join(l for l in (b.get("hostnameSwitchesString") or "").splitlines()
                                             if len(l.split()) > 1 and l.split()[1] in ("*", "behind-the-scene"))
