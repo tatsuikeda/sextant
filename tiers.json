@@ -1,0 +1,116 @@
+{
+  "chrome": {
+    "akahnknmcbmgodngfjcflnaljdbhnlfo": {
+      "name": "Vertical Tabs in Side Panel",
+      "tier": "optional"
+    },
+    "aleakchihdccplidncghkekgioiakgal": {
+      "name": "h264ify",
+      "tier": "optional"
+    },
+    "bgnkhhnnamicmpeenaelnjfhikgbkllg": {
+      "name": "AdGuard AdBlocker",
+      "tier": "core"
+    },
+    "chphlpgkkbolifaimnlloiipkdnihall": {
+      "name": "OneTab",
+      "tier": "optional"
+    },
+    "elifhakcjgalahccnjkneoccemfahfoa": {
+      "name": "Markdown Here",
+      "tier": "optional"
+    },
+    "fpnmgdkabkmnadcjpehmlllkndpkmiak": {
+      "name": "Wayback Machine",
+      "tier": "optional"
+    },
+    "gebbhagfogifgggkldgodflihgfeippi": {
+      "name": "Return YouTube Dislike",
+      "tier": "optional"
+    },
+    "ghbmnnjooekpmoecnnnilnnbdlolhkhi": {
+      "name": "Google Docs Offline",
+      "tier": "optional"
+    },
+    "iplffkdpngmdjhlpjmppncnlhomiipha": {
+      "name": "Unpaywall",
+      "tier": "optional"
+    },
+    "lkbebcjgcmobigpeffafkodonchffocl": {
+      "homepage": "https://gitflic.ru/project/magnolia1234/bypass-paywalls-chrome-clean",
+      "name": "Bypass Paywalls Clean",
+      "off_store": true,
+      "tier": "optional",
+      "update_url": "https://gitflic.ru/project/magnolia1234/bpc_updates/blob/raw?file=updates.xml"
+    },
+    "mnjggcdmjocbbbhaepdhchncahnbgone": {
+      "name": "SponsorBlock for YouTube - Skip Sponsorships",
+      "tier": "optional"
+    },
+    "nffaoalbilbmmfgbnbgppjihopabppdk": {
+      "name": "Video Speed Controller",
+      "tier": "optional"
+    },
+    "ponfpcnoihfmfllpaingbgckeeldkhle": {
+      "name": "Enhancer for YouTube™",
+      "tier": "optional"
+    }
+  },
+  "firefox": {
+    "@contain-facebook": {
+      "name": "Facebook Container",
+      "tier": "core"
+    },
+    "@testpilot-containers": {
+      "name": "Firefox Multi-Account Containers",
+      "tier": "core"
+    },
+    "enhancerforyoutube@maximerf.addons.mozilla.org": {
+      "name": "Enhancer for YouTube™",
+      "tier": "optional"
+    },
+    "extension@one-tab.com": {
+      "name": "OneTab",
+      "tier": "optional"
+    },
+    "magnolia@12.34": {
+      "homepage": "https://gitflic.ru/project/magnolia1234/bypass-paywalls-chrome-clean",
+      "name": "Bypass Paywalls Clean",
+      "off_store": true,
+      "tier": "optional",
+      "update_manifest": "https://gitflic.ru/project/magnolia1234/bpc_updates/blob/raw?file=updates.json"
+    },
+    "markdown-here-webext@adam.pritchard": {
+      "name": "Markdown Here",
+      "tier": "optional"
+    },
+    "sponsorBlocker@ajay.app": {
+      "name": "SponsorBlock for YouTube - Skip Sponsorships",
+      "tier": "optional"
+    },
+    "uBlock0@raymondhill.net": {
+      "name": "uBlock Origin",
+      "tier": "core"
+    },
+    "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}": {
+      "name": "TWP - Translate Web Pages",
+      "tier": "optional"
+    },
+    "{3c078156-979c-498b-8990-85f7987dd929}": {
+      "name": "Sidebery",
+      "tier": "optional"
+    },
+    "{762f9885-5a13-4abd-9c77-433dcd38b8fd}": {
+      "name": "Return YouTube Dislike",
+      "tier": "optional"
+    },
+    "{9a41dee2-b924-4161-a971-7fb35c053a4a}": {
+      "name": "enhanced-h264ify",
+      "tier": "optional"
+    },
+    "{f209234a-76f0-4735-9920-eb62507a54cd}": {
+      "name": "Unpaywall",
+      "tier": "optional"
+    }
+  }
+}

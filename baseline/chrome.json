@@ -1,0 +1,102 @@
+{
+  "extensions": {
+    "akahnknmcbmgodngfjcflnaljdbhnlfo": {
+      "manifest_version": 3,
+      "name": "Vertical Tabs in Side Panel",
+      "store": "https://chromewebstore.google.com/detail/akahnknmcbmgodngfjcflnaljdbhnlfo",
+      "version": "1.0.8"
+    },
+    "aleakchihdccplidncghkekgioiakgal": {
+      "manifest_version": 3,
+      "name": "h264ify",
+      "store": "https://chromewebstore.google.com/detail/aleakchihdccplidncghkekgioiakgal",
+      "version": "2.0.1"
+    },
+    "bgnkhhnnamicmpeenaelnjfhikgbkllg": {
+      "manifest_version": 3,
+      "name": "AdGuard AdBlocker",
+      "store": "https://chromewebstore.google.com/detail/bgnkhhnnamicmpeenaelnjfhikgbkllg",
+      "version": "5.5.4.56"
+    },
+    "chphlpgkkbolifaimnlloiipkdnihall": {
+      "manifest_version": 3,
+      "name": "OneTab",
+      "store": "https://chromewebstore.google.com/detail/chphlpgkkbolifaimnlloiipkdnihall",
+      "version": "2.24"
+    },
+    "elifhakcjgalahccnjkneoccemfahfoa": {
+      "manifest_version": 3,
+      "name": "Markdown Here",
+      "store": "https://chromewebstore.google.com/detail/elifhakcjgalahccnjkneoccemfahfoa",
+      "version": "2.16.0"
+    },
+    "fpnmgdkabkmnadcjpehmlllkndpkmiak": {
+      "manifest_version": 3,
+      "name": "Wayback Machine",
+      "store": "https://chromewebstore.google.com/detail/fpnmgdkabkmnadcjpehmlllkndpkmiak",
+      "version": "3.4.8"
+    },
+    "gebbhagfogifgggkldgodflihgfeippi": {
+      "manifest_version": 3,
+      "name": "Return YouTube Dislike",
+      "store": "https://chromewebstore.google.com/detail/gebbhagfogifgggkldgodflihgfeippi",
+      "version": "4.1.7"
+    },
+    "ghbmnnjooekpmoecnnnilnnbdlolhkhi": {
+      "manifest_version": 3,
+      "name": "Google Docs Offline",
+      "store": "https://chromewebstore.google.com/detail/ghbmnnjooekpmoecnnnilnnbdlolhkhi",
+      "version": "1.111.1"
+    },
+    "iplffkdpngmdjhlpjmppncnlhomiipha": {
+      "manifest_version": 3,
+      "name": "Unpaywall",
+      "store": "https://chromewebstore.google.com/detail/iplffkdpngmdjhlpjmppncnlhomiipha",
+      "version": "3.99"
+    },
+    "lkbebcjgcmobigpeffafkodonchffocl": {
+      "name": "Bypass Paywalls Clean",
+      "off_store": true,
+      "store": "https://gitflic.ru/project/magnolia1234/bypass-paywalls-chrome-clean",
+      "version": "not installed here"
+    },
+    "mnjggcdmjocbbbhaepdhchncahnbgone": {
+      "manifest_version": 3,
+      "name": "SponsorBlock for YouTube - Skip Sponsorships",
+      "store": "https://chromewebstore.google.com/detail/mnjggcdmjocbbbhaepdhchncahnbgone",
+      "version": "6.1.6"
+    },
+    "nffaoalbilbmmfgbnbgppjihopabppdk": {
+      "manifest_version": 3,
+      "name": "Video Speed Controller",
+      "store": "https://chromewebstore.google.com/detail/nffaoalbilbmmfgbnbgppjihopabppdk",
+      "version": "0.11.1"
+    },
+    "ponfpcnoihfmfllpaingbgckeeldkhle": {
+      "manifest_version": 3,
+      "name": "Enhancer for YouTube™",
+      "store": "https://chromewebstore.google.com/detail/ponfpcnoihfmfllpaingbgckeeldkhle",
+      "version": "3.0.19"
+    }
+  },
+  "prefs": {
+    "alternate_error_pages.enabled": true,
+    "autofill.credit_card_enabled": false,
+    "autofill.profile_enabled": true,
+    "dns_over_https.mode": null,
+    "dns_over_https.templates": null,
+    "https_only_mode_enabled": null,
+    "net.network_prediction_options": 0,
+    "performance_tuning.high_efficiency_mode.state": null,
+    "privacy_sandbox.m1.ad_measurement_enabled": null,
+    "privacy_sandbox.m1.fledge_enabled": null,
+    "privacy_sandbox.m1.topics_enabled": null,
+    "profile.block_third_party_cookies": null,
+    "profile.cookie_controls_mode": 1,
+    "safebrowsing.enabled": null,
+    "safebrowsing.enhanced": null,
+    "search.suggest_enabled": false,
+    "translate.enabled": null,
+    "url_keyed_anonymized_data_collection.enabled": true
+  }
+}

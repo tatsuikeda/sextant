@@ -1,0 +1,90 @@
+{
+  "extensions": {
+    "@contain-facebook": {
+      "name": "Facebook Container",
+      "store": "https://addons.mozilla.org/firefox/addon/@contain-facebook/",
+      "version": "2.3.12"
+    },
+    "@testpilot-containers": {
+      "name": "Firefox Multi-Account Containers",
+      "store": "https://addons.mozilla.org/firefox/addon/@testpilot-containers/",
+      "version": "8.4.0"
+    },
+    "enhancerforyoutube@maximerf.addons.mozilla.org": {
+      "name": "Enhancer for YouTube™",
+      "store": "https://addons.mozilla.org/firefox/addon/enhancerforyoutube@maximerf.addons.mozilla.org/",
+      "version": "2.0.136"
+    },
+    "extension@one-tab.com": {
+      "name": "OneTab",
+      "store": "https://addons.mozilla.org/firefox/addon/extension@one-tab.com/",
+      "version": "2.25"
+    },
+    "magnolia@12.34": {
+      "name": "Bypass Paywalls Clean",
+      "off_store": true,
+      "store": "https://gitflic.ru/project/magnolia1234/bypass-paywalls-chrome-clean",
+      "version": "4.4.9.0"
+    },
+    "markdown-here-webext@adam.pritchard": {
+      "name": "Markdown Here",
+      "store": "https://addons.mozilla.org/firefox/addon/markdown-here-webext@adam.pritchard/",
+      "version": "2.16.0"
+    },
+    "sponsorBlocker@ajay.app": {
+      "name": "SponsorBlock for YouTube - Skip Sponsorships",
+      "store": "https://addons.mozilla.org/firefox/addon/sponsorBlocker@ajay.app/",
+      "version": "6.1.7"
+    },
+    "uBlock0@raymondhill.net": {
+      "name": "uBlock Origin",
+      "store": "https://addons.mozilla.org/firefox/addon/uBlock0@raymondhill.net/",
+      "version": "1.76.0"
+    },
+    "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}": {
+      "name": "TWP - Translate Web Pages",
+      "store": "https://addons.mozilla.org/firefox/addon/{036a55b4-5e72-4d05-a06c-cba2dfcc134a}/",
+      "version": "10.2.1.0"
+    },
+    "{3c078156-979c-498b-8990-85f7987dd929}": {
+      "name": "Sidebery",
+      "store": "https://addons.mozilla.org/firefox/addon/{3c078156-979c-498b-8990-85f7987dd929}/",
+      "version": "5.6.1"
+    },
+    "{762f9885-5a13-4abd-9c77-433dcd38b8fd}": {
+      "name": "Return YouTube Dislike",
+      "store": "https://addons.mozilla.org/firefox/addon/{762f9885-5a13-4abd-9c77-433dcd38b8fd}/",
+      "version": "4.1.7"
+    },
+    "{9a41dee2-b924-4161-a971-7fb35c053a4a}": {
+      "name": "enhanced-h264ify",
+      "store": "https://addons.mozilla.org/firefox/addon/{9a41dee2-b924-4161-a971-7fb35c053a4a}/",
+      "version": "2.2.1"
+    },
+    "{f209234a-76f0-4735-9920-eb62507a54cd}": {
+      "name": "Unpaywall",
+      "store": "https://addons.mozilla.org/firefox/addon/{f209234a-76f0-4735-9920-eb62507a54cd}/",
+      "version": "3.98"
+    }
+  },
+  "prefs": {
+    "app.shield.optoutstudies.enabled": false,
+    "browser.contentblocking.category": "strict",
+    "browser.discovery.enabled": false,
+    "datareporting.healthreport.uploadEnabled": false,
+    "network.dns.disablePrefetch": true,
+    "network.http.speculative-parallel-limit": 0,
+    "network.prefetch-next": false,
+    "privacy.annotate_channels.strict_list.enabled": true,
+    "privacy.bounceTrackingProtection.mode": 1,
+    "privacy.clearOnShutdown_v2.formdata": true,
+    "privacy.fingerprintingProtection": true,
+    "privacy.query_stripping.enabled": true,
+    "privacy.query_stripping.enabled.pbmode": true,
+    "privacy.trackingprotection.allow_list.convenience.enabled": false,
+    "privacy.trackingprotection.consentmanager.skip.pbmode.enabled": false,
+    "privacy.trackingprotection.emailtracking.enabled": true,
+    "privacy.trackingprotection.enabled": true,
+    "privacy.trackingprotection.socialtracking.enabled": true
+  }
+}

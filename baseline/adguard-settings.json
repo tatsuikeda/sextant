@@ -1,0 +1,66 @@
+{
+  "extension-specific-settings": {
+    "allow-anonymized-usage-data": false,
+    "collect-hits-count": false,
+    "hide-rate-adguard": false,
+    "show-app-updated-info": false,
+    "show-context-menu": true,
+    "show-info-about-adguard": true,
+    "use-optimized-filters": false,
+    "user-rules-editor-wrap": false
+  },
+  "filters": {
+    "allowlist": {
+      "domains": [],
+      "enabled": true,
+      "inverted": false,
+      "inverted-domains": []
+    },
+    "custom-filters": [],
+    "enabled-filters": [
+      2,
+      3,
+      4,
+      17,
+      18,
+      208
+    ],
+    "enabled-groups": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "user-filter": {
+      "disabled-rules": "",
+      "enabled": true,
+      "rules": ""
+    }
+  },
+  "general-settings": {
+    "allow-acceptable-ads": false,
+    "appearance-theme": "system",
+    "autodetect-filters": true,
+    "filters-update-period": -1,
+    "safebrowsing-enabled": true,
+    "show-blocked-ads-count": true
+  },
+  "protocol-version": "2.0",
+  "stealth": {
+    "block-known-trackers": true,
+    "stealth-block-first-party-cookies": false,
+    "stealth-block-first-party-cookies-time": 4320,
+    "stealth-block-third-party-cookies": true,
+    "stealth-block-third-party-cookies-time": 2880,
+    "stealth-block-webrtc": false,
+    "stealth-disable-stealth-mode": true,
+    "stealth-hide-referrer": true,
+    "stealth-hide-search-queries": true,
+    "stealth-remove-x-client": true,
+    "stealth-send-do-not-track": true,
+    "strip-tracking-parameters": true
+  }
+}

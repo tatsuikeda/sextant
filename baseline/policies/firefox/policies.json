@@ -1,0 +1,97 @@
+{
+  "policies": {
+    "3rdparty": {
+      "Extensions": {
+        "uBlock0@raymondhill.net": {
+          "toOverwrite": {
+            "filterLists": [
+              "adguard-cookies",
+              "adguard-generic",
+              "adguard-mobile-app-banners",
+              "adguard-other-annoyances",
+              "adguard-popup-overlays",
+              "adguard-social",
+              "adguard-spyware-url",
+              "adguard-widgets",
+              "block-lan",
+              "curben-phishing",
+              "easylist",
+              "easylist-annoyances",
+              "easylist-chat",
+              "easylist-newsletters",
+              "easylist-notifications",
+              "easyprivacy",
+              "fanboy-cookiemonster",
+              "fanboy-social",
+              "fanboy-thirdparty_social",
+              "https://ublockorigin.github.io/uAssets/filters/resource-abuse.txt",
+              "plowe-0",
+              "ublock-annoyances",
+              "ublock-badware",
+              "ublock-cookies-adguard",
+              "ublock-cookies-easylist",
+              "ublock-filters",
+              "ublock-privacy",
+              "ublock-quick-fixes",
+              "ublock-unbreak",
+              "urlhaus-1"
+            ]
+          }
+        }
+      }
+    },
+    "DisableFirefoxStudies": true,
+    "DisableTelemetry": true,
+    "EnableTrackingProtection": {
+      "BaselineExceptions": true,
+      "ConvenienceExceptions": false,
+      "Cryptomining": true,
+      "EmailTracking": true,
+      "Fingerprinting": true,
+      "Locked": false,
+      "SuspectedFingerprinting": true,
+      "Value": true
+    },
+    "ExtensionSettings": {
+      "@contain-facebook": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/@contain-facebook/latest.xpi",
+        "installation_mode": "force_installed"
+      },
+      "@testpilot-containers": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/@testpilot-containers/latest.xpi",
+        "installation_mode": "force_installed"
+      },
+      "uBlock0@raymondhill.net": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/uBlock0@raymondhill.net/latest.xpi",
+        "installation_mode": "force_installed"
+      }
+    },
+    "Preferences": {
+      "browser.discovery.enabled": {
+        "Status": "default",
+        "Type": "boolean",
+        "Value": false
+      },
+      "network.dns.disablePrefetch": {
+        "Status": "default",
+        "Type": "boolean",
+        "Value": true
+      },
+      "network.http.speculative-parallel-limit": {
+        "Status": "default",
+        "Type": "number",
+        "Value": 0
+      },
+      "network.prefetch-next": {
+        "Status": "default",
+        "Type": "boolean",
+        "Value": false
+      },
+      "privacy.fingerprintingProtection": {
+        "Status": "default",
+        "Type": "boolean",
+        "Value": true
+      }
+    }
+  }
+}
