@@ -123,3 +123,7 @@ The maintainer has been online since 1989, browsed the early web in Mosaic, and 
 ## Sources
 
 Firefox policies: mozilla/policy-templates `docs/index.md`. Chrome policies: Chromium `components/policy/resources/templates/policy_definitions`. uBlock Origin managed settings: uBO wiki, "Deploying uBlock Origin: configuration". Ubuntu snap policy paths: Ubuntu Discourse and Launchpad reports. All checked 2026-11-10.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
